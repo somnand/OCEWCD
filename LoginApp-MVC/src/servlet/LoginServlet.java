@@ -1,12 +1,14 @@
 package servlet;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import service.AuthenticationService;
 import util.LogginHelper;
 
 /**
@@ -28,7 +30,14 @@ public class LoginServlet extends HttpServlet {
 		String password=request.getParameter("pwd");
 		
 		LogginHelper.log("User ID : "+userId+" Password "+password+" is captured");
-		LogginHelper.log("Unimplemented!!");
+		AuthenticationService service=new AuthenticationService();
+		
+		boolean isGenuine=service.authenticate(userId, password);
+		HttpSession thisSession=request.getSession();
+		thisSession.setAttribute("userId", userId);
+		if(isGenuine)
+			response.sendRedirect("welcome.jsp");
+		LogginHelper.log("Implemented now!!");
+		
 	}
-
 }
