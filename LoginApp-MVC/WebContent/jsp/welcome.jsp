@@ -6,12 +6,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/mainstyles.css"/>
 <title>Welcome Page</title>
 </head>
 <body>
 <%
 	LogginHelper.log("Inside welcome.jsp");
 %>
-Welcome <b><%=session.getAttribute("userId") %></b>
+<div id="welcome_div" class="infoDiv">
+<p>
+<center>Welcome <b><%=session.getAttribute("userId") %></b></center>
+</p>
+</div>
 </body>
 </html>
