@@ -35,9 +35,11 @@ public class LoginServlet extends HttpServlet {
 		boolean isGenuine=service.authenticate(userId, password);
 		HttpSession thisSession=request.getSession();
 		thisSession.setAttribute("userId", userId);
+		
 		if(isGenuine)
-			response.sendRedirect("welcome.jsp");
-		LogginHelper.log("Implemented now!!");
+			response.sendRedirect("jsp/welcome.jsp");
+		else
+			response.sendRedirect("jsp/invalid.jsp");
 		
 	}
 }
