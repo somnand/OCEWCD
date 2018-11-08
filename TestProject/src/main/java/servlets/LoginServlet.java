@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import service.AuthenticationService;
-import util.LogginHelper;
+import util.LogingHelper;
 
 /**
  * Servlet implementation class LoginServlet
@@ -24,12 +24,12 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException 
 	{
-		LogginHelper.log("Entering servlet");
+		LogingHelper.log("Entering servlet");
 		
 		String userId=request.getParameter("userId");
 		String password=request.getParameter("pwd");
 		
-		LogginHelper.log("User ID : "+userId+" Password "+password+" is captured");
+		LogingHelper.log("User ID : "+userId+" Password "+password+" is captured");
 		AuthenticationService service=new AuthenticationService();
 		
 		boolean isGenuine=service.authenticate(userId, password);

@@ -10,7 +10,6 @@
 <title>Welcome : Login 1.0</title>
 </head>
 <body>
-	<!-- <center><h2>Login</h2></center> -->
 	<br/><br/>
 	<div id="login" class="loginDiv">
 	<form action="login" method="post" accept-charset="UTF-8">
@@ -19,9 +18,6 @@
 		<center><input type="text" name="pwd" placeholder="Enter PIN(Only numbers)" onkeypress="return checkKey(event)"/></center>
 		<center><input type="submit" value="Authenticate"/></center>
 	</form>	
-	</div>
-	<p>
-		Context path for Page : ${pageContext.request.contextPath}
-	</p>
+	</div>	
 </body>
 </html>

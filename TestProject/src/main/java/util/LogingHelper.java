@@ -3,7 +3,7 @@ package util;
 import java.util.Date;
 
 /**Cross cutting logging helper */
-public final class LogginHelper 
+public final class LogingHelper 
 {
 	public static void log(String msg)
 	{

@@ -1,10 +1,13 @@
 package servlets;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import util.LogingHelper;
 
 /**
  * Servlet implementation class GreetingServlet
@@ -17,13 +20,13 @@ public class GreetingServlet extends HttpServlet {
 	 */
 	public GreetingServlet() {
 		super();
-		System.out.println("Inside greeting servlet !! ");
+		LogingHelper.log("Inside greeting servlet !! ");
 	}
 
 	public void init()
 	{
-		message=getServletConfig().getInitParameter("servletMessage");
-		System.out.println("Initiliazing the servlet via the container : "+message);		
+		message=getServletConfig().getInitParameter("configParam");
+		LogingHelper.log("Initiliazing the servlet via the container Init-Params: "+message);		
 	}
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
@@ -31,7 +34,7 @@ public class GreetingServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException 
 	{
+		message=getServletContext().getInitParameter("configParam");
 		response.getWriter().println("Hello World from Servlet "+message);		
 	}
-
 }

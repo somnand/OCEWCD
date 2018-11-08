@@ -18,14 +18,19 @@
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 
+	<context-param>
+		<param-name>configParam</param-name>
+		<param-value>Hi there ! I am a Servlet(Application) Context Param</param-value>
+	</context-param>
+
 	<servlet>
 		<servlet-name>GreetingServlet</servlet-name>
 		<servlet-class>servlets.GreetingServlet</servlet-class>
 		<init-param>
-			<param-name>servletConfigParam</param-name>
+			<param-name>configParam</param-name>
 			<param-value>Hi there ! I am a Servlet Config Param</param-value>
 		</init-param>
-	</servlet>
+	</servlet>	
 	<servlet-mapping>
 		<servlet-name>GreetingServlet</servlet-name>
 		<url-pattern>/hello</url-pattern>
