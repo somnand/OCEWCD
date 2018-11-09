@@ -24,7 +24,7 @@ Clone the project.
 
 *git clone https://github.com/somnand/OCEWCD.git*
 
-Once the clone is complete then import the TestaProject in Eclipse as an Existing Maven project.
+Once the clone is complete then import the TestProject in Eclipse as an Existing Maven project.
 Setup the Runtime by navigating to the ProjectFacets.
 Facets should be 
 * WebDeploymentModule 2.3 or 2.5

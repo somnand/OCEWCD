@@ -1,6 +1,12 @@
 <html>
+<head>
+<title>Welcome to TestProject platform</title>
+</head>
 <body>
 <h2>Hello World!</h2>
-<h3>Welcome to TestProject platform</h3>
+<p>
+Message : <%=application.getAttribute("listenerMessage") %><br/>
+Message : ${applicationScope.listenerMessage }
+</p>
 </body>
 </html>

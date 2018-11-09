@@ -13,6 +13,7 @@
 	<br/><br/>
 	<div id="login" class="loginDiv">
 	<form action="login" method="post" accept-charset="UTF-8">
+		<b><center>Servlet JSP Platform</center></b>
 		<center><input type="text" name="userId" placeholder="Enter User Id"/></center>
 		<center><input type="password" name="pwd" placeholder="Enter Password"/></center>
 		<center><input type="text" name="pwd" placeholder="Enter PIN(Only numbers)" onkeypress="return checkKey(event)"/></center>

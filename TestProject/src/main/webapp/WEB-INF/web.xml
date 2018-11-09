@@ -22,6 +22,11 @@
 		<param-name>configParam</param-name>
 		<param-value>Hi there ! I am a Servlet(Application) Context Param</param-value>
 	</context-param>
+	
+	<!-- Context Listener classes -->
+	<listener>
+		<listener-class>listeners.AppContextListener</listener-class>
+	</listener>
 
 	<servlet>
 		<servlet-name>GreetingServlet</servlet-name>
