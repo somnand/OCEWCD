@@ -1,6 +1,6 @@
 # TestProject(migrated from Mavenized-LoginApp-MVC) 
 
-Sample project for practising the tests in OCEWCD.
+Sample project for practising the tests in OCEWCD. **Follow development branch for this project.**
 
 Java classes located in /src/main/java (general naming convention)
 Project Resource located in /src/main/resources (currently empty)
@@ -24,7 +24,7 @@ Clone the project.
 
 *git clone https://github.com/somnand/OCEWCD.git*
 
-Once the clone is complete then import the TestProject in Eclipse as an Existing Maven project.
+Once the clone is complete then import the TestaProject in Eclipse as an Existing Maven project.
 Setup the Runtime by navigating to the ProjectFacets.
 Facets should be 
 * WebDeploymentModule 2.3 or 2.5
