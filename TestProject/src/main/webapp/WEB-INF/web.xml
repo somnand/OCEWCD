@@ -35,9 +35,19 @@
 			<param-name>configParam</param-name>
 			<param-value>Hi there ! I am a Servlet Config Param</param-value>
 		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>MultiThreadingTester</servlet-name>
+		<display-name>MultiThreadingTester</display-name>
+		<description></description>
+		<servlet-class>servlets.MultiThreadingTester</servlet-class>
 	</servlet>	
 	<servlet-mapping>
 		<servlet-name>GreetingServlet</servlet-name>
 		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MultiThreadingTester</servlet-name>
+		<url-pattern>/multiThread</url-pattern>
 	</servlet-mapping>
 </web-app>
