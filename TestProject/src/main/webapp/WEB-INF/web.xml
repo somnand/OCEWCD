@@ -42,6 +42,10 @@
 		<description></description>
 		<servlet-class>servlets.MultiThreadingTester</servlet-class>
 	</servlet>	
+	<servlet>
+		<servlet-name>TransferMessage</servlet-name>
+		<servlet-class>servlets.MessageTransferServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>GreetingServlet</servlet-name>
 		<url-pattern>/hello</url-pattern>
@@ -50,4 +54,10 @@
 		<servlet-name>MultiThreadingTester</servlet-name>
 		<url-pattern>/multiThread</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TransferMessage</servlet-name>
+		<url-pattern>/transferMessage</url-pattern>
+		<url-pattern>/jsp/el/transferMessage</url-pattern>
+	</servlet-mapping>
+	
 </web-app>
