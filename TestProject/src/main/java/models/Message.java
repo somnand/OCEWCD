@@ -2,11 +2,18 @@ package models;
 
 import java.io.Serializable;
 
+import util.LogingHelper;
+
 public class Message implements Serializable
 {
 	private String content;
 	private int priority;
 
+	public Message()
+	{
+		LogingHelper.log("Blank constructor is called for Message class");
+	}
+		
 	public Message(String content, int priority)
 	{
 		super();
