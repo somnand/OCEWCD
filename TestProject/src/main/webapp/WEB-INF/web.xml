@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
- -->
+<!-- <!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 
+	2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd" > -->
 
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://java.sun.com/xml/ns/javaee"
@@ -12,22 +9,21 @@
 	<display-name>Archetype Created Web Application</display-name>
 
 	<welcome-file-list>
-		<welcome-file>/jsp/login.jsp</welcome-file>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
 		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>/jsp/login.jsp</welcome-file>
 	</welcome-file-list>
 
 	<context-param>
 		<param-name>configParam</param-name>
-		<param-value>Hi there ! I am a Servlet(Application) Context Param</param-value>
+		<param-value>Hi there ! I am a Servlet(Application) Context Param
+		</param-value>
 	</context-param>
-	
+
 	<!-- Context Listener classes -->
 	<listener>
 		<listener-class>listeners.AppContextListener</listener-class>
 	</listener>
-
+	<!-- All Servlets -->
 	<servlet>
 		<servlet-name>GreetingServlet</servlet-name>
 		<servlet-class>servlets.GreetingServlet</servlet-class>
@@ -39,13 +35,13 @@
 	<servlet>
 		<servlet-name>MultiThreadingTester</servlet-name>
 		<display-name>MultiThreadingTester</display-name>
-		<description></description>
 		<servlet-class>servlets.MultiThreadingTester</servlet-class>
-	</servlet>	
+	</servlet>
 	<servlet>
 		<servlet-name>TransferMessage</servlet-name>
 		<servlet-class>servlets.MessageTransferServlet</servlet-class>
 	</servlet>
+	<!-- All mappings -->
 	<servlet-mapping>
 		<servlet-name>GreetingServlet</servlet-name>
 		<url-pattern>/hello</url-pattern>
@@ -59,5 +55,4 @@
 		<url-pattern>/transferMessage</url-pattern>
 		<url-pattern>/jsp/el/transferMessage</url-pattern>
 	</servlet-mapping>
-	
 </web-app>

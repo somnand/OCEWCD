@@ -3,8 +3,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Welcome to TestProject : EL Page tester</title>
+<!-- <script type="text/javascript" src="../../javascripts/centralscript.js"/> -->
+
+<script>
+function checkPriority()
+{
+	var priority =document.getElementById("priority_field").value;
+	var form=document.getElementById("message_form");
+	if(priority)
+		form.submit();
+	else
+		alert("Please enter a priority");
+}
+</script>
+
 </head>
 <body>
 	This form is used to test the Page el_page.jsp
@@ -19,10 +34,10 @@
 	</form>
 	<br/>
 	This form is used to test the Page standard_tags_page.jsp. Send a message across the JSPs.
-	<form action="./transferMessage" method="get">
+	<form id="message_form" action="./transferMessage" method="get">
 		Content : <input type="text" name="content" /><br /> 
-		Priority : <input type="text" name="priority" /><br /> 		 
-		<input type="submit" />
+		Priority : <input id="priority_field" type="text" name="priority" /><br /> 		 
+		<input type="button" value="submit" onclick="checkPriority()"/>
 	</form>
 </body>
 </html>

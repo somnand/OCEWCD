@@ -1,14 +1,9 @@
 package models;
 
-import java.io.Serializable;
-
 import util.LogingHelper;
 
-public class Message implements Serializable
+public class Message extends GenericMessage
 {
-	private String content;
-	private int priority;
-
 	public Message()
 	{
 		LogingHelper.log("Blank constructor is called for Message class");
@@ -20,22 +15,11 @@ public class Message implements Serializable
 		this.content = content;
 		this.priority = priority;
 	}
-
-	public String getContent()
-	{
-		return content;
-	}
-
+	
 	public void setContent(String content)
 	{
 		this.content = content;
 	}
-
-	public int getPriority()
-	{
-		return priority;
-	}
-
 	public void setPriority(int priority)
 	{
 		this.priority = priority;
