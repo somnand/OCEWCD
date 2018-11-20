@@ -19,6 +19,11 @@
 		</param-value>
 	</context-param>
 
+	<context-param>
+		<param-name>contextParam</param-name>
+		<param-value>Hi there ! I am a Servlet(Application) Context Param
+		</param-value>
+	</context-param>
 	<!-- Context Listener classes -->
 	<listener>
 		<listener-class>listeners.AppContextListener</listener-class>
@@ -41,6 +46,10 @@
 		<servlet-name>TransferMessage</servlet-name>
 		<servlet-class>servlets.MessageTransferServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>CallElPageServlet</servlet-name>
+		<servlet-class>servlets.CallElPageServlet</servlet-class>
+	</servlet>
 	<!-- All mappings -->
 	<servlet-mapping>
 		<servlet-name>GreetingServlet</servlet-name>
@@ -54,5 +63,9 @@
 		<servlet-name>TransferMessage</servlet-name>
 		<url-pattern>/transferMessage</url-pattern>
 		<url-pattern>/jsp/el/transferMessage</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CallElPageServlet</servlet-name>
+		<url-pattern>/coreTags</url-pattern>
 	</servlet-mapping>
 </web-app>
