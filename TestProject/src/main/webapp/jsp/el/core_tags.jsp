@@ -8,9 +8,9 @@
 <title>Welcome to TestProject : Core JSTL page</title>
 </head>
 <body>
-Invoke the page with the path /TestProject/coreTags<br/>
-Message from Context : ${message}<br/>
-Message printing using core tags : <c:out value="${message}"/><br/><br/>
+<b style="color: red">Invoke the page with the path /TestProject/coreTags</b><br/>
+Message from Context : ${xmlContent}<br/>
+Message printing using core tags : <c:out value="${xmlContent}" escapeXml="true" default="No message assigned!"/><br/><br/>
 <b>Printing messges using EL + JSTL</b> <br/>
 <c:forEach items="${messages}" var="i">
 	${i}<br/>

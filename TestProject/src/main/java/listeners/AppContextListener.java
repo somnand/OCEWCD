@@ -22,9 +22,11 @@ public class AppContextListener implements ServletContextListener
 		LogingHelper.log("Constructing the application context\nCreating a Message and setting it as an appliaction level attribute");
 		Message message =new Message("This is a message generated in the listener",5);
 		
+		String xmlContent = "<b>This should be in bold</b> and this should be not!!";
+		xmlContent=null;
 		ServletContext context=event.getServletContext();
 		context.setAttribute("listenerMessage", message);
-		
+		context.setAttribute("xmlContent", xmlContent);
 		message=new Message("This is a dynamic ContextParam",1);
 		
 		context.setInitParameter("dynamicParam", message.toString());
