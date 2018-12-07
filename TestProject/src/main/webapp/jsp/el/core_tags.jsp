@@ -15,9 +15,29 @@ Message printing using core tags : <c:out value="${xmlContent}" escapeXml="true"
 <c:forEach items="${messages}" var="i">
 	${i}<br/>
 </c:forEach>
-<b>Printing messages using pure JSTL</b> <br/>
+<b>Printing messages using pure JSTL - Using tables</b> <br/>
+<table border="1">
+<tr>
+<th>Priority</th>
+<th>Content</th>
+</tr>
 <c:forEach items="${messages}" var="i">
-	<c:out value="${i }"/><br/>
+<tr>
+<td><c:out value="${i.priority }"/></td>
+<td><c:out value="${i.content }"/></td>
+</tr>
+</c:forEach>
+</table><br/><br/>
+<b>Printing messages using pure JSTL - Using tables - Nested forEach loop</b> <br/>
+<table border="1">
+<c:forEach var="messageRow" items="${listOfMessages}">
+<tr>
+<c:forEach var="message" items="${messageRow}" varStatus="messageCount">
+<td><c:out value="${messageCount.count}"/></td>
+<td><c:out value="${message.priority}"/></td>
+<td><c:out value="${message.content}"/></td>
+</c:forEach>
+</tr>
 </c:forEach>
 </body>
 </html>
