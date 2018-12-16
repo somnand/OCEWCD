@@ -68,4 +68,10 @@
 		<servlet-name>CallElPageServlet</servlet-name>
 		<url-pattern>/coreTags</url-pattern>
 	</servlet-mapping>
+	
+	<!-- Error Handling -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/jsp/error_page.jsp</location>	
+	</error-page>	
 </web-app>

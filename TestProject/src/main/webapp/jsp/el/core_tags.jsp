@@ -6,10 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Welcome to TestProject : Core JSTL page</title>
+<script>
+	console.log("Current Cookie : "+document.cookie);
+</script>
 </head>
 <body>
 	Message from Context : ${xmlContent}<br />
-	Message printing using core tags :<c:out value="${xmlContent}" escapeXml="true" default="No message assigned!" />
+	Message printing using core tags :<c:out value="${xmlContent}" escapeXml="true" default="No message assigned!" /><br/>
+	Redirect to <b>el_behaviour_test.jsp</b> <a href="<c:url value='/jsp/el/el_behaviour_test.jsp'/>">el_behaviour_test.jsp</a><br/> 	
 	<br />
 	<br />
 	<c:choose>
