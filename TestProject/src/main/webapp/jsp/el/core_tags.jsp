@@ -13,12 +13,13 @@
 <body>
 	Message from Context : ${xmlContent}<br />
 	Message printing using core tags :<c:out value="${xmlContent}" escapeXml="true" default="No message assigned!" /><br/>
-	Redirect to <b>el_behaviour_test.jsp</b> <a href="<c:url value='/jsp/el/el_behaviour_test.jsp'/>">el_behaviour_test.jsp</a><br/> 	
+	Redirect to <b>el_behaviour_test.jsp</b> <a href="<c:url value='/jsp/el/el_behaviour_test.jsp'/>">el_behaviour_test.jsp</a><br/> 
+	Session ID : <c:out value="${pageContext.session.id}" default="No Session involved"/><br/>
 	<br />
 	<br />
 	<c:choose>
 	<c:when test="${not empty messages}">
-		<b>Printing messges using EL + JSTL</b>	<br />
+		<b>Printing messages using EL + JSTL</b>	<br />
 		<c:forEach items="${messages}" var="i">
 		${i}<br />
 		</c:forEach>
