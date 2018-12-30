@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import models.Message;
 import util.LogingHelper;
@@ -26,8 +27,7 @@ public class CallElPageServlet extends HttpServlet
 	 */
 	public CallElPageServlet()
 	{
-		super();
-		LogingHelper.log("Inside CallELPageServlet !! ");
+		super();		
 	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
@@ -53,6 +53,11 @@ public class CallElPageServlet extends HttpServlet
 		
 		request.setAttribute("messages", messages);
 		request.setAttribute("listOfMessages", listOfMessages);
+		
+		HttpSession session= request.getSession();
+		session.setAttribute("sessionString", "This is added in Session");
+		
+		LogingHelper.log("Session ID : "+session.getId());
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/el/core_tags.jsp");
 		dispatcher.forward(request, response);

@@ -15,7 +15,7 @@
 Integer i = new Integer(3);
 
 ArrayList list = new ArrayList();
-list.add("tru");
+list.add("true");
 list.add("false");
 list.add("13");
 list.add("2");
