@@ -23,7 +23,7 @@ public class AppContextListener implements ServletContextListener
 		Message message =new Message("This is a message generated in the listener",5);
 		
 		String xmlContent = "<b>This should be in bold</b> and this should be not!!";
-		xmlContent=null;
+		//xmlContent=null;
 		ServletContext context=event.getServletContext();
 		context.setAttribute("listenerMessage", message);
 		context.setAttribute("xmlContent", xmlContent);

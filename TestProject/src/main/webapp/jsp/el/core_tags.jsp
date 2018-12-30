@@ -48,7 +48,7 @@
 	<c:otherwise>
 		Supporting only Application Context variables.
 		<br/>
-		<c:forEach var="contextVar" items="${pageContext.servletContext.initParameterNames}">		
+		<c:forEach var="contextVar" items="${pageContext.servletContext.attributeNames}">		
 			<i><c:out value="${contextVar}"/></i><br/>		
 		</c:forEach>
 		<br/>
