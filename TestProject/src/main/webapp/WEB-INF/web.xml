@@ -57,11 +57,10 @@
 		<servlet-name>LifeCycleServlet</servlet-name>
 		<servlet-class>servlets.LifeCycleServlet</servlet-class>
 	</servlet>
-	
-	<!-- All mappings -->
+	<!-- All Servlet Mappings -->
 	<servlet-mapping>
 		<servlet-name>GreetingServlet</servlet-name>
-		<url-pattern>/hello</url-pattern>
+		<url-pattern>/filter</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>MultiThreadingTester</servlet-name>
@@ -86,4 +85,31 @@
 		<exception-type>java.lang.Throwable</exception-type>
 		<location>/jsp/error_page.jsp</location>	
 	</error-page>	
+	
+	<!-- Filters -->
+	  <filter>
+	    <filter-name>Filter1</filter-name>
+	    <filter-class>filters.Filter1</filter-class>
+	  </filter>
+	  <filter>
+	    <filter-name>Filter2</filter-name>
+	    <filter-class>filters.Filter2</filter-class>
+	  </filter>
+	  <filter>
+	    <filter-name>Filter3</filter-name>
+	    <filter-class>filters.Filter3</filter-class>
+	  </filter>	  	  
+	<!-- Filter Mappings -->  
+	  <filter-mapping>
+	    <filter-name>Filter1</filter-name>
+	    <url-pattern>/filter</url-pattern>
+	  </filter-mapping>
+	  <filter-mapping>
+	    <filter-name>Filter3</filter-name>
+	    <url-pattern>/filter</url-pattern>
+	  </filter-mapping>	  
+	  <filter-mapping>
+	    <filter-name>Filter2</filter-name>
+	    <url-pattern>/filter</url-pattern>
+	  </filter-mapping>	  			
 </web-app>
