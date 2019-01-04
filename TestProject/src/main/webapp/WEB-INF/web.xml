@@ -53,6 +53,11 @@
 		<servlet-name>CallElPageServlet</servlet-name>
 		<servlet-class>servlets.CallElPageServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>LifeCycleServlet</servlet-name>
+		<servlet-class>servlets.LifeCycleServlet</servlet-class>
+	</servlet>
+	
 	<!-- All mappings -->
 	<servlet-mapping>
 		<servlet-name>GreetingServlet</servlet-name>
@@ -70,6 +75,10 @@
 	<servlet-mapping>
 		<servlet-name>CallElPageServlet</servlet-name>
 		<url-pattern>/coreTags</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LifeCycleServlet</servlet-name>
+		<url-pattern>/lifeCycle</url-pattern>
 	</servlet-mapping>
 	
 	<!-- Error Handling -->
