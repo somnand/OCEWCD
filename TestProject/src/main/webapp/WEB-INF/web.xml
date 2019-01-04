@@ -57,6 +57,13 @@
 		<servlet-name>LifeCycleServlet</servlet-name>
 		<servlet-class>servlets.LifeCycleServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>SecuredServlet</display-name>
+		<servlet-name>SecuredServlet</servlet-name>
+		<servlet-class>servlets.SecuredServlet</servlet-class>
+	</servlet>
 	<!-- All Servlet Mappings -->
 	<servlet-mapping>
 		<servlet-name>GreetingServlet</servlet-name>
@@ -78,6 +85,10 @@
 	<servlet-mapping>
 		<servlet-name>LifeCycleServlet</servlet-name>
 		<url-pattern>/lifeCycle</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SecuredServlet</servlet-name>
+		<url-pattern>/secured</url-pattern>
 	</servlet-mapping>
 	
 	<!-- Error Handling -->
@@ -119,5 +130,35 @@
 	  <filter-mapping>
 	    <filter-name>Filter2</filter-name>
 	    <url-pattern>/extraFilter</url-pattern>
-	  </filter-mapping>	  			
+	  </filter-mapping>
+	  
+	<!-- Web Security -->
+	<!--  Defining the Roles -->
+		<security-role>
+			<role-name>Admin</role-name>
+		</security-role>
+		<security-role>
+			<role-name>Member</role-name>
+		</security-role>
+		<security-role>
+			<role-name>Guest</role-name>
+		</security-role>
+	<!-- Defining the secured resources -->  
+	<security-constraint>
+		<!-- Webresources that can be viewed by the users specifically -->
+		<web-resource-collection>
+			<web-resource-name>AdminOnly</web-resource-name>
+			<url-pattern>/secured</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>Admin</role-name>
+			<!-- <role-name>Member</role-name> -->
+		</auth-constraint>
+	</security-constraint>
+	<!-- Login Mechanism -->
+	<login-config>
+		<auth-method>BASIC</auth-method>
+	</login-config>  	  			
 </web-app>
