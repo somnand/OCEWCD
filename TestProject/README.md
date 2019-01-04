@@ -1,6 +1,8 @@
 # TestProject(migrated from Mavenized-LoginApp-MVC) 
 
-Sample project for practising the tests in OCEWCD. **Follow development branch for this project.**
+Sample project for practising the tests in OCEWCD. 
+**Follow development branch for this project.**
+**Follow security branch for all Secured Constraint related stuff**
 
 Java classes located in /src/main/java (general naming convention)
 Project Resource located in /src/main/resources (currently empty)
@@ -14,10 +16,14 @@ In the tomcat server edit the file tomcat-users.xml to add roles and users.
 	<role rolename="Member"/>
 	<role rolename="Guest"/>
 <!-- List of all user-role mappings -->	
-	<user username="su" password="su" roles="Admin"/>
+	<user username="su" password="su" roles="Admin,Member,Guest"/>
 	<user username="member" password="member" roles="Admin,Member"/>
-	<user username="guest" password="guest" roles="Admin,Member,Guest"/>
+	<user username="guest" password="guest" roles="Guest"/>
 ```
+For testing out security related resources please call them over an incognito window. 
+Always close the browser window after a single request as the credentials are catched in the browser.
+**NO NEED to re-deploy the Application until unless there are changes to web.xml** 
+
 ## Getting Started
 
 Clone the project. 
@@ -36,14 +42,11 @@ Facets should be
 1. jdk1.7(or newer)
 2. git
 3. maven (this is only for the project structure and not for build)
+4. eclipse
 ```
 ## Running the tests
 
 Currently there are no Unit tests.
-
-### Break down into end to end tests
-
-Tests will cover the overall functionality of the project.
 
 ## Built With
 
