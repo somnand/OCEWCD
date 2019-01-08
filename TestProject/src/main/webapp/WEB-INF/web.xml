@@ -57,6 +57,10 @@
 		<servlet-name>LifeCycleServlet</servlet-name>
 		<servlet-class>servlets.LifeCycleServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>servlets.LoginServlet</servlet-class>
+	</servlet>		
 	<!-- All Servlet Mappings -->
 	<servlet-mapping>
 		<servlet-name>GreetingServlet</servlet-name>
@@ -79,7 +83,10 @@
 		<servlet-name>LifeCycleServlet</servlet-name>
 		<url-pattern>/lifeCycle</url-pattern>
 	</servlet-mapping>
-	
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/jsp/login</url-pattern>
+	</servlet-mapping>
 	<!-- Error Handling -->
 	<error-page>
 		<exception-type>java.lang.Throwable</exception-type>

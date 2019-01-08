@@ -14,7 +14,6 @@ import util.LogingHelper;
 /**
  * Servlet implementation class LoginServlet
  */
-//Commment @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -37,9 +36,9 @@ public class LoginServlet extends HttpServlet {
 		thisSession.setAttribute("userId", userId);
 		
 		if(isGenuine)
-			response.sendRedirect("jsp/welcome.jsp");
+			response.sendRedirect("welcome.jsp");
 		else
-			response.sendRedirect("jsp/invalid.jsp");
+			response.sendRedirect("invalid.jsp");
 		
 	}
 }
