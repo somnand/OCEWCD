@@ -36,7 +36,12 @@ public class LoginServlet extends HttpServlet {
 		thisSession.setAttribute("userId", userId);
 		
 		if(isGenuine)
-			response.sendRedirect("welcome.jsp");
+		{
+			String url = response.encodeURL("welcome.jsp");
+			LogingHelper.log("Encoded URL(welcome.jsp)  : "+url);
+			response.sendRedirect(url);
+		}
+			
 		else
 			response.sendRedirect("invalid.jsp");
 		

@@ -15,7 +15,10 @@
 %>
 <div id="welcome_div" class="infoDiv">
 <p>
-<center>Welcome <b><%=session.getAttribute("userId") %></b></center>
+<center>
+Welcome <b><%=session.getAttribute("userId") %></b><br/>
+User carried the session : ${pageContext.session.id}
+</center>
 </p>
 </div>
 </body>
