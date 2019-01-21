@@ -18,7 +18,6 @@
 		<param-value>Hi there ! I am a Servlet Config Param
 		</param-value>
 	</context-param>
-
 	<context-param>
 		<param-name>contextParam</param-name>
 		<param-value>Hi there ! I am a Servlet(Application) Context Param
